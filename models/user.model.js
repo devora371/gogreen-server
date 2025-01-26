@@ -17,7 +17,6 @@ const userSchema = new mongoose.Schema({
   email: { type: String },
   mobile: {
     type: String,
-    unique: true,
     validate: {
       validator: function (v) {
         return /^[0-9]{10}$/.test(v);
